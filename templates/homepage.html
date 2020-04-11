@@ -1,0 +1,45 @@
+{% extends 'base1.html' %}
+
+{% load static %}
+
+{% block page %}
+<link rel="stylesheet" type="text/css" href="{% static "css/loader.css" %}">
+<link rel="stylesheet" type="text/css" href="{% static "css/parallax.css" %}">
+<script src="{% static "js/hide.js" %}"></script>
+<div class="loader" id="ll" style="visibility: visible"></div>
+
+</head>
+<body id="bod" style="visibility:hidden;height: 100vh;width: 100%">
+<div>{% include 'navbar.html' %}
+
+<div class="pimg2">
+     <div class="ptext">
+         <span class="border1">
+             Image 2
+         </span>
+     </div>
+ </div>
+
+<section class="section section-dark">
+     <h2>Software Developer part 2</h2>
+     <p>Lorem Ipsum 2</p>
+ </section>
+
+ <div class="pimg2">
+     <div class="ptext">
+         <span class="border1">
+             Image 2
+         </span>
+     </div>
+ </div>
+
+<section class="section section-dark">
+     <h2>Software Developer part 2</h2>
+     <p>Lorem Ipsum 2</p>
+ </section>
+
+</div>
+</body>
+
+
+{% endblock %}

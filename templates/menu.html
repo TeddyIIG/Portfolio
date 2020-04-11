@@ -1,0 +1,46 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block page %}
+   <link rel="stylesheet" type="text/css" href="{% static "css/neon.css" %}">
+
+</head>
+
+<body id="img1" style="width: auto;height: 100vh">
+
+<a href="#" id="top_buttn">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Portfolio
+
+</a>
+
+<a href="#" id="bottom">
+     <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Client Portal
+
+</a>
+
+</body>
+<script>
+
+VANTA.NET({
+  el: "#img1",
+  mouseControls: false,
+  touchControls: false,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x8f8fff,
+  backgroundColor: 0x0,
+  points: 7.00,
+  maxDistance: 24.00,
+  spacing: 20.00
+})
+</script>
+</html>
+
+{% endblock %}
