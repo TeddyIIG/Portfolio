@@ -21,12 +21,12 @@ body,html{
 .pimg1{
   height: 75vh;
   width: 100%;
- position: fixed;
+ background-image: url("../images/blur.jpg");
 
 }
 
 .pimg2{
   min-height: 700px;
-  background-image: url("../images/blur.jpg");
+  background-image: url("../images/laptop.jpg");
 
 }
