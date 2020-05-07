@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -8,3 +9,7 @@ def main(request):
 
 def menu(request):
     return render(request, 'menu.html')
+
+
+def home(request):
+    return HttpResponse("Hello World")
