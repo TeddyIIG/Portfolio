@@ -19,14 +19,14 @@ body,html{
 }
 
 .pimg1{
-  height: 100vh;
+  height: 90vh;
   width: 100%;
  background-image: url("../images/citylights.jpg");
 
 }
 
 .pimg2{
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   background-image: url("../images/laptop.jpg");
 

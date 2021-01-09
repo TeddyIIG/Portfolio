@@ -3,28 +3,35 @@
 {% block page %}
    <link rel="stylesheet" type="text/css" href="{% static "css/neon.css" %}">
 
+
 </head>
 
 <body id="img1" style="width: auto;height: 100vh">
 
-<a href="{% url 'porthome' %}" id="top_buttn">
+<div class="avatar" style="position: fixed;top: 20%;left: 50%; transform: translate(-50%, -50%);" id="myimage">
+<img src="{% static 'images/image_logo.jpg' %}" alt="My image" >
+</div>
+
+<div style="position: fixed;top: 55%;left: 50%; transform: translate(-50%, -50%);">
+<a href="{% url 'porthome' %}" id="top_buttn"  >
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-    Portfolio
+    The Dev
 
 </a>
-
-<a href="#" id="bottom">
+</div>
+<div style="position: fixed;top: 65%;left: 50%; transform: translate(-50%, -50%);">
+<a href="#" id="bottom_buttn" >
      <span></span>
     <span></span>
     <span></span>
     <span></span>
-    Client Portal
+    The Gamer
 
 </a>
-
+</div>
 </body>
 <script>
 
