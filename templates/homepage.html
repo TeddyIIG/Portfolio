@@ -14,37 +14,46 @@
 <body id="bod" style="visibility:hidden;height: 100vh;width: 100%">
 <div>{% include 'navbar.html' %}
 
-<div class="pimg1">
-     <div class="ptext">
+<div id="parentCarousel" class="carousel slide" data-ride ="carousel">
+    <ol class="carousel-indicators">
+        <li data-target = "#parentCarousel" data-slide-to="0" class="active"></li>
+        <li data-target = "#parentCarousel" data-slide-to="1"></li>
+    </ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
 
-         <span class="border1">
+    <div class="container">
 
-         </span>
+        <h1> Welcome to my portfolio</h1>
+        <p> Hey there! Welcome to my personal portfolio. I am a Software Engineering Undergraduate who completed his Bachelors in Software Engineering at Curtin Universityy, Perth, WA. Currently I am residing in Sri Lanka
+        and am working as an Associate Operations Engineer at a well known Higher Education company based in the United States. To know more about me, click on the button below</p>
 
-     </div>
-
- </div>
-
-<div id="sectionbody">
-    <div class="box1">
-        <div class="content1">
-            <p> </p>
-        </div>
+        <a href="#" class="btn btn-lg " style="background-color: navy;color: white"> About Me</a>
     </div>
+
+</div>
+<div class="carousel-item">
+
+    <div class="container">
+
+        <h1> My Projects</h1>
+        <p> Hey there! Welcome to my personal portfolio. I am a Software Engineering Undergraduate who completed his Bachelors in Software Engineering at Curtin Universityy, Perth, WA. Currently I am residing in Sri Lanka
+        and am working as an Associate Operations Engineer at a well known Higher Education company based in the United States. To know more about me, click on the button below</p>
+
+        <a href="#" class="btn btn-lg " style="background-color: navy;color: white"> About Me</a>
+    </div>
+
+</div>
+</div>
 </div>
 
- <div class="pimg2">
-     <div class="ptext">
-         <span class="border1">
-
-         </span>
+<div class="pimg2">
+   <div class="ptext">
+      <span class="border1"></span>
      </div>
- </div>
+</div>
 
-<section class="section section-dark">
-     <h2>Software Developer part 2</h2>
-     <p>Lorem Ipsum 2</p>
- </section>
+
 
 </div>
 </body>

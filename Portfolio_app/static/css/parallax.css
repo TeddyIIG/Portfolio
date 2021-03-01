@@ -18,12 +18,12 @@ body,html{
   background-attachment: fixed;
 }
 
-.pimg1{
-  height: 90vh;
-  width: 100%;
- background-image: url("../images/citylights.jpg");
+/*.pimg1{*/
+/*  height: 90vh;*/
+/*  width: 100%;*/
+/* background-image: url("../images/citylights.jpg");*/
 
-}
+/*}*/
 
 .pimg2{
   height: 90vh;
@@ -31,4 +31,19 @@ body,html{
   background-image: url("../images/laptop.jpg");
 
 
+}
+
+.carousel-item{
+  height: 45rem;
+  background-color: gray;
+  color: white;
+  position: relative;
+}
+
+.container{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
 }
