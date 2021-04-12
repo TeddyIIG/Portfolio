@@ -3,13 +3,14 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
 
     <title>Welcome to my portfolio</title>
 
     {% include 'CDN/bootstrap.html' %}
     {% include 'CDN/vantajs.html' %}
 
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/customfonts.css' %}">
     <script src="{% static "js/chatbot.js" %}"></script>
 
 

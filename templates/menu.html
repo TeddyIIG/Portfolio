@@ -7,12 +7,13 @@
 </head>
 
 <body id="img1" style="width: auto;height: 100vh">
+<div class="avatar" style="position: fixed;top: 20%;left: 50%; transform: translate(-50%, -50%);width: 300px;height: 300px" id="myimage">
+<img style="object-fit: cover; width: 450px;height: 400px; margin-left: -50px" src="{% static 'images/image_logo.jpg' %}" alt="My image" >
 
-<div class="avatar" style="position: fixed;top: 20%;left: 50%; transform: translate(-50%, -50%);" id="myimage">
-<img style="object-fit: cover; width: 200px;height: 200px; margin-left: -25px" src="{% static 'images/image_logo.jpg' %}" alt="My image" >
 </div>
-
+<h1 style="color: white;position: fixed;top: 45%;left: 50%; transform: translate(-50%, -50%);"> Shehanka Fernando </h1>
 <div style="position: fixed;top: 55%;left: 50%; transform: translate(-50%, -50%);">
+
 <a href="{% url 'porthome' %}" id="top_buttn"  >
     <span></span>
     <span></span>

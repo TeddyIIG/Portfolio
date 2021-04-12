@@ -3,15 +3,15 @@
 //}, 2000); // <-- time in milliseconds
 
 
-$(window).load(function() {
+$(window).on('load',function() {
     $('#ll').hide();
  });
 
-
-
-$(window).load(function() {
+$(window).on('load',function() {
     document.getElementById("bod").style.visibility='visible';
  });
+
+
 
 
 
