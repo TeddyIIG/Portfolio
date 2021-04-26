@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.menu, name='menu'),
     path('portfolio/', views.main, name='porthome'),
-    path('home/', views.home),
+    path('error404/', views.error404, name='error404'),
+    path('registration/',views.registration, name = 'registration')
 ]

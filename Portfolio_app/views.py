@@ -13,3 +13,11 @@ def menu(request):
 
 def home(request):
     return HttpResponse("Hello World")
+
+
+def error404(request):
+    return render(request, '404error.html')
+
+
+def registration(request):
+    return render(request, 'registration.html')
