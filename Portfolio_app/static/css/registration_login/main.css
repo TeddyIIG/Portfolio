@@ -271,7 +271,7 @@ h6 {
    #BACKGROUND
    ========================================================================== */
 .bg-image{
-  background-image: url("../../images/bubble-animated-background.svg");
+  background-image: url("../../images/Black-Animation-Background.svg");
     /* Full height */
   height: 100%;
 
@@ -629,7 +629,7 @@ input {
   color: #999;
   font-size: 14px;
   margin: 0;
-  margin-top: 7px;
+  margin-top: 10px;
   left: 0;
 }
 

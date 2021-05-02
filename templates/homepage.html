@@ -14,20 +14,20 @@
 <div id="maincarousel"  class="carousel slide" data-bs-ride="carousel" data-interval="20000" data-pause="hover">
   <div class="carousel-inner">
     <div class="carousel-item active" >
-      <img src="{% static "images/bubble-animated-background.svg" %}" class="d-block w-100" style="height:100vh;opacity: 0.6;object-fit: cover;" alt="...">
+      <img src="{% static "images/Black-Animation-Background.svg" %}" class="d-block w-100" style="height:100vh;opacity: 1;object-fit: cover;" alt="...">
         <div class="carousel-caption d-md-block" style="top: 50%;transform: translateY(-50%);">
         <h5 id="subtexthead" style="font-family: FredokaOne;font-size: 5vh;">Hey there! Welcome to my personal Portfolio</h5>
         <h6 id="subtext" style="font-family: Bubblegum;font-size:3vh;color:ghostwhite;">The name's Shehanka, and I am a Sri Lankan based Software Engineer, mostly specializing in backend development involving Python, C# and Java. I do a bit of Front End development as well, Click on the button below to know more about me!  </h6>
 
-        <a href="{% url 'error404' %}" class="btn btn-outline-light btn-lg" style="margin-top: 5%">About Me!</a>
+        <a href="{% url 'aboutme' %}" class="btn btn-outline-light btn-lg" style="margin-top: 5%">About Me!</a>
         </div>
     </div>
     <div class="carousel-item">
-      <img src="{% static "images/pexels-devportal.jpg" %}" class="d-block w-100" style="height:100vh;object-fit: cover;opacity: 0.5" alt="...">
+      <img src="{% static "images/fadebackground.svg" %}" class="d-block w-100" style="height:100vh;object-fit: cover;opacity: 1" alt="...">
     <div class="carousel-caption d-md-block" style="top: 50%;transform: translateY(-50%);">
         <h5 id="subtexthead" style="font-family: FredokaOne;font-size: 5vh;margin-bottom: 1.2vw">Developer Portal</h5>
         <h6 id="subtext" style="font-family: Bubblegum;font-size: 3vh;color:;margin-bottom: 2vw"> You can login or register to my developer portal for my freelance projects, a seperate client dashboard is provided with many project metrics for you to check on   </h6>
-        <a href="#" class="btn btn-outline-light btn-lg">Login</a>
+        <a href="{% url 'login' %}" class="btn btn-outline-light btn-lg">Login</a>
         <a href="{% url 'registration' %}" style="padding-right: 20px;margin-left: 5%" class="btn btn-outline-light btn-lg">Register</a>
     </div>
     </div>

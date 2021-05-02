@@ -21,3 +21,11 @@ def error404(request):
 
 def registration(request):
     return render(request, 'registration.html')
+
+
+def aboutme(request):
+    return render(request, 'aboutme.html')
+
+
+def login(request):
+    return render(request, 'login.html')
