@@ -113,7 +113,7 @@
 	 animation: revealScaleUp 0.75s 2.82s ease both 1;
 }
  .t-block-teal {
-	 background: #02aa9d;
+	 background: #dd1cff;
 }
  .t-block-teal h2 {
 	 color: #fff;
@@ -137,7 +137,7 @@
 	 width: 30px;
 	 height: 30px;
 	 border-radius: 50%;
-	 background: none repeat scroll 0% 0% #02aa9d;
+	 background: none repeat scroll 0% 0% #dd1cff;
 	 border: 5px solid #fff;
 	 animation: revealScaleUp 0.75s 0s ease both 1;
 }
