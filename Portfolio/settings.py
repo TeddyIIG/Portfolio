@@ -26,7 +26,7 @@ SECRET_KEY = 'r=7p+zzdc=az1#v3a*0snjzvt*t^^dq-)p+@flbo(l5x@%-hjk'
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['shehankafernando.com']
 
 
 # Application definition
