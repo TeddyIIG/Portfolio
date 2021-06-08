@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Portfolio_app.apps.PortfolioAppConfig',
+    'phone_field'
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -78,8 +82,15 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'Portfolio/../db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'Portfolio/../db.sqlite3'),
+
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'portfolio',
+        'USER': 'shehanka',
+        'PASSWORD': 'Sharmaine1',
+        'HOST': '192.3.13.96',
+        'PORT': '3306',
     }
 }
 
@@ -103,6 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -123,7 +135,7 @@ USE_TZ = True
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
-
+AUTH_USER_MODEL = 'Portfolio_app.User'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     # 'templates/'
