@@ -39,6 +39,23 @@ class UserManager(BaseUserManager):
         return user
 
 
+class ProfileManager(BaseUserManager):
+    def create_profile(self, user, phoneno, registration_mode, company):
+        if not user.username:
+            raise ValueError("Username address is mandatory")
+        if not user.email:
+            raise ValueError("Email address is mandatory")
+        if not user.password:
+            raise ValueError("Password is mandatory")
+        user_obj = self.model(
+            email=self.normalize_email(user.email)
+        )
+        user_obj.set_password(user.password)
+
+        user_obj.save(using=self._db)
+        return user_obj
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)
     username = models.CharField(max_length=50, unique=True)
@@ -79,6 +96,7 @@ class Profile(models.Model):
     registration_mode = models.CharField(choices=CLIENT_CHOICES, max_length=25)
     company = models.CharField(max_length=20)
     REQUIRED_FIELDS = ['user', 'phoneno', 'registration_mode', 'company']
+    profileobjects = ProfileManager()
 
     def __str__(self):
         return self.user.username
