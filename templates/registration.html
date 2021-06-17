@@ -136,9 +136,9 @@
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject" id="option_registration">
-                                            <option disabled="disabled" selected="selected">Choose client type</option>
+                                            <option disabled="disabled" >Choose client type</option>
                                             <option>Freelance Client</option>
-                                            <option>Guest User</option>
+                                            <option selected="selected">Guest User </option>
 
                                         </select>
                                         <div class="select-dropdown"></div>
@@ -148,14 +148,31 @@
                         </div>
 
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--red" type="submit" data-bs-toggle="modal"  data-bs-target="#alertModal">Register</button>
+                        </div>
+                                                <!-- Modal -->
+                        <div class="modal fade" id="alertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                  {{ successmsg }}
+                              </div>
+                              <div class="modal-footer">
+
+                              </div>
+                            </div>
+                          </div>
                         </div>
 
                             <div class="form-row p-t-20">
                             <label class="label label--block">Already have an account? Login below!</label>
 
                         <div style="margin-top: 20px">
-                            <button class="btn btn--radius-2 btn--blue" type="button" data-toggle="modal" data-target="popup_register" ><a style="color: white" href="{% url 'login' %}">Login</a></button>
+                            <button class="btn btn--radius-2 btn--blue" type="button"  ><a style="color: white" href="{% url 'login' %}">Login</a></button>
                         </div>
 
                         <div style="margin-top: 20px;margin-left: 20px">
@@ -172,6 +189,7 @@
 {#                                    <span class="checkmark"></span>#}
 {#                                </label>#}
 {#                            </div>#}
+
                         </div>
                     </form>
                 </div>
@@ -179,26 +197,8 @@
         </div>
     </div>
 
-    <!-- Modal -->
-<div class="modal fade" id="popup_register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 
     <!-- Jquery JS-->
     <script src="{% static 'vendorbasedlibs/registrationlogin/jquery/jquery.min.js' %}"></script>

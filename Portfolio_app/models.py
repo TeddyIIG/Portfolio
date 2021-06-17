@@ -9,10 +9,12 @@ class UserManager(BaseUserManager):
         other_fields.setdefault('is_staff', True)
         other_fields.setdefault('is_superuser', True)
         other_fields.setdefault('is_active', True)
+        other_fields['firstname'] = 'Admin'
+        other_fields['lastname'] = 'User'
 
         return self.create_user(username, email, password, **other_fields)
 
-    def create_user(self, username, email, password=None, **other_fields):
+    def create_user(self, username, email, password=None, **names):
         if not username:
             raise ValueError("Username address is mandatory")
         if not email:
@@ -20,7 +22,9 @@ class UserManager(BaseUserManager):
         if not password:
             raise ValueError("Password is mandatory")
         email = self.normalize_email(email)
-        user = self.model(email=email, username=username, **other_fields)
+        user = self.model(email=email,
+                          username=username, firstname=names.get('firstname'), lastname=names.get('lastname'))
+
         user.set_password(password)
         user.save()
         return user
@@ -41,17 +45,13 @@ class UserManager(BaseUserManager):
 
 class ProfileManager(BaseUserManager):
     def create_profile(self, user, phoneno, registration_mode, company):
-        if not user.username:
-            raise ValueError("Username address is mandatory")
-        if not user.email:
-            raise ValueError("Email address is mandatory")
-        if not user.password:
-            raise ValueError("Password is mandatory")
         user_obj = self.model(
-            email=self.normalize_email(user.email)
+            user=user
         )
-        user_obj.set_password(user.password)
 
+        user_obj.phoneno = phoneno
+        user_obj.registration_mode = registration_mode
+        user_obj.company = company
         user_obj.save(using=self._db)
         return user_obj
 
@@ -63,7 +63,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     lastname = models.CharField(max_length=20)
     email = models.EmailField(max_length=255, unique=True)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
