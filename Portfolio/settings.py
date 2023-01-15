@@ -82,15 +82,15 @@ WSGI_APPLICATION = 'Portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'Portfolio/../db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'Portfolio/../db.sqlite3'),
 
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portfolio',
-        'USER': 'shehanka',
-        'PASSWORD': 'Sharmaine1',
-        'HOST': '192.3.13.96',
-        'PORT': '3306',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'portfolio',
+        # 'USER': 'shehanka',
+        # 'PASSWORD': 'Sharmaine1',
+        # 'HOST': '192.3.13.96',
+        # 'PORT': '3306',
     }
 }
 
