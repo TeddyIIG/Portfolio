@@ -11,3 +11,5 @@ Portfolio/__pycache__/__init__.cpython-38.pyc
 Portfolio/__pycache__/settings.cpython-38.pyc
 Portfolio/__pycache__/urls.cpython-38.pyc
 Portfolio/__pycache__/wsgi.cpython-38.pyc
+Portfolio_app/migrations/0001_initial.py
+db.sqlite3
